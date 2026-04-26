@@ -19,6 +19,9 @@ export default function Navbar({ title = "My App", logoSrc }: NavbarProps) {
         <li>
           <a href="/beadel-juice">Beadel Juice</a>
         </li>
+        <li>
+          <a href="/converters">Converters</a>
+        </li>
       </ul>
     </nav>
   );

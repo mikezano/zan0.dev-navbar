@@ -6,6 +6,7 @@ const SITE_LINKS: NavLinkDef[] = [
   { to: "/", label: "Home", end: true },
   { to: "/converters", label: "Converters" },
   { to: "/qa-automation", label: "QA Automation" },
+  { to: "/zano-press", label: "Zano Press" },
 ];
 
 export interface SiteNavbarProps {
@@ -20,6 +21,10 @@ export interface SiteNavbarProps {
  * Bakes in the site's route structure and is exposed as the
  * Module Federation remote: navbar/Navbar
  */
-export default function SiteNavbar({ title = "Zano", logoSrc, links = SITE_LINKS }: SiteNavbarProps) {
+export default function SiteNavbar({
+  title = "Zano",
+  logoSrc,
+  links = SITE_LINKS,
+}: SiteNavbarProps) {
   return <Navbar title={title} logoSrc={logoSrc} links={links} />;
 }
