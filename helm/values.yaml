@@ -1,0 +1,46 @@
+namespace:
+  name: zan0-dev
+  create: false  # set to true if the namespace doesn't already exist
+
+image:
+  name: zan0.dev-navbar
+  registry: zanoacrs2fckki4vwff2.azurecr.io
+  #registry: localhost  # Use localhost for local development
+  tag: latest
+  imagePullPolicy: Always
+  #imagePullPolicy: IfNotPresent  # Use IfNotPresent for local development
+
+deployment:
+  name: zan0-dev-navbar-deployment
+  containerName: aks-app-ui-navbar
+  containerPort: 8080
+  replicaCount: 1
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    allowPrivilegeEscalation: false
+  resources:
+    requests:
+      cpu: "10m"
+      memory: "32Mi"
+    limits:
+      cpu: "200m"
+      memory: "64Mi"
+
+service:
+  name: zan0-dev-navbar-service
+  type: ClusterIP
+  targetPort: 8080 # The port your container listens on
+  port: 3000 # The port your service will be exposed on
+
+secret:
+  name: zano-tls-secret
+
+gateway:
+  name: zano-gateway
+  namespace: zano-gateway # namespace of the shared aks-infra gateway
+
+route:
+  name: zano-http-route-navbar
+  host: zano.dev
+  path: /navbar
