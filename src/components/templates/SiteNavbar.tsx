@@ -6,6 +6,7 @@ const SITE_LINKS: NavLinkDef[] = [
   { to: "/", label: "Home", end: true },
   { to: "/converters", label: "Converters" },
   { to: "/qa-automation", label: "QA Automation" },
+  { to: "/dupligrid", label: "Dupligrid" },
   { to: "/zano-press", label: "Zano Press" },
 ];
 
