@@ -1,6 +1,6 @@
 import { BrandLogo } from "../atoms/BrandLogo";
 import { BrandTitle } from "../atoms/BrandTitle";
-import "../../styles/molecules/NavBrand.css";
+import styles from "./NavBrand.module.css";
 
 interface NavBrandProps {
   title: string;
@@ -9,7 +9,7 @@ interface NavBrandProps {
 
 export function NavBrand({ title, logoSrc }: NavBrandProps) {
   return (
-    <div className="molecule-nav-brand">
+    <div className={styles.brand}>
       {logoSrc && <BrandLogo src={logoSrc} alt={title} />}
       <BrandTitle title={title} />
     </div>

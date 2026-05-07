@@ -1,9 +1,9 @@
-import "../../styles/atoms/Brand.css";
+import styles from "./BrandTitle.module.css";
 
 interface BrandTitleProps {
   title: string;
 }
 
 export function BrandTitle({ title }: BrandTitleProps) {
-  return <span className="atom-brand-title">{title}</span>;
+  return <span className={styles.title}>{title}</span>;
 }

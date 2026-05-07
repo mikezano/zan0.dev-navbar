@@ -1,4 +1,4 @@
-import "../../styles/atoms/Brand.css";
+import styles from "./BrandLogo.module.css";
 
 interface BrandLogoProps {
   src: string;
@@ -6,5 +6,5 @@ interface BrandLogoProps {
 }
 
 export function BrandLogo({ src, alt = "logo" }: BrandLogoProps) {
-  return <img src={src} alt={alt} className="atom-brand-logo" />;
+  return <img src={src} alt={alt} className={styles.logo} />;
 }

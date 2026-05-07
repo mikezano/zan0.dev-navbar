@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/TemperatureConverter.css";
+import styles from "./TemperatureConverter.module.css";
 
 type TemperatureUnit = "celsius" | "fahrenheit" | "kelvin";
 
@@ -51,11 +51,11 @@ export const TemperatureConverter = () => {
   };
 
   return (
-    <div className="temperature-converter">
+    <div className={styles.container}>
       <h2>Temperature Converter</h2>
 
-      <div className="converter-input-group">
-        <div className="input-section">
+      <div className={styles.inputGroup}>
+        <div className={styles.inputSection}>
           <label htmlFor="temp-value">Temperature Value:</label>
           <input
             id="temp-value"
@@ -66,7 +66,7 @@ export const TemperatureConverter = () => {
           />
         </div>
 
-        <div className="unit-section">
+        <div className={styles.unitSection}>
           <label htmlFor="unit-select">Unit:</label>
           <select
             id="unit-select"
@@ -81,24 +81,24 @@ export const TemperatureConverter = () => {
       </div>
 
       {isValidInput && result && (
-        <div className="converter-results">
+        <div className={styles.results}>
           <h3>Conversions</h3>
-          <div className="results-grid">
-            <div className="result-card">
-              <span className="result-label">Celsius</span>
-              <span className="result-value">
+          <div className={styles.resultsGrid}>
+            <div className={styles.resultCard}>
+              <span className={styles.resultLabel}>Celsius</span>
+              <span className={styles.resultValue}>
                 {result.celsius} {unitLabels.celsius}
               </span>
             </div>
-            <div className="result-card">
-              <span className="result-label">Fahrenheit</span>
-              <span className="result-value">
+            <div className={styles.resultCard}>
+              <span className={styles.resultLabel}>Fahrenheit</span>
+              <span className={styles.resultValue}>
                 {result.fahrenheit} {unitLabels.fahrenheit}
               </span>
             </div>
-            <div className="result-card">
-              <span className="result-label">Kelvin</span>
-              <span className="result-value">
+            <div className={styles.resultCard}>
+              <span className={styles.resultLabel}>Kelvin</span>
+              <span className={styles.resultValue}>
                 {result.kelvin} {unitLabels.kelvin}
               </span>
             </div>
@@ -107,7 +107,7 @@ export const TemperatureConverter = () => {
       )}
 
       {inputValue && !isValidInput && (
-        <div className="error-message">Please enter a valid number</div>
+        <div className={styles.errorMessage}>Please enter a valid number</div>
       )}
     </div>
   );

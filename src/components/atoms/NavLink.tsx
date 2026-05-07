@@ -1,5 +1,5 @@
 import { NavLink as RouterNavLink } from "react-router-dom";
-import "../../styles/atoms/NavLink.css";
+import styles from "./NavLink.module.css";
 
 export interface NavLinkDef {
   to: string;
@@ -16,7 +16,7 @@ export function NavLink({ to, label, end }: NavLinkProps) {
       to={to}
       end={end}
       className={({ isActive }) =>
-        `atom-nav-link${isActive ? " atom-nav-link--active" : ""}`
+        isActive ? `${styles.link} ${styles.active}` : styles.link
       }
     >
       {label}
