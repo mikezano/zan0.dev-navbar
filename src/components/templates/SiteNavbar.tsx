@@ -7,7 +7,8 @@ const SITE_LINKS: NavLinkDef[] = [
   { to: "/converters", label: "Converters" },
   { to: "/qa-automation", label: "QA Automation" },
   { to: "/dupligrid", label: "Dupligrid" },
-  { to: "/zano-press", label: "Zano Press" },
+  { to: "/zano-press", label: "Zano Presss" },
+  { to: "/translations", label: "Translations" },
 ];
 
 export interface SiteNavbarProps {
