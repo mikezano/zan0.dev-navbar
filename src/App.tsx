@@ -1,5 +1,5 @@
 import { BrowserRouter, useInRouterContext } from "react-router-dom";
-import "./App.css";
+//import "./App.css";
 import SiteNavbar from "./components/templates/SiteNavbar";
 
 /**
@@ -22,7 +22,7 @@ function App() {
 function NavbarApp() {
   return (
     <>
-      <SiteNavbar title="Zano (dev)" />
+      <SiteNavbar title="Zano (devj)" />
       <main style={{ padding: "2rem", color: "#fff", opacity: 0.6 }}>
         <p>Navbar MFE — standalone dev view at port 3001</p>
       </main>
