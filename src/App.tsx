@@ -22,7 +22,7 @@ function App() {
 function NavbarApp() {
   return (
     <>
-      <SiteNavbar title="Zano (devj)" />
+      <SiteNavbar title="Zano (dev)" />
       <main style={{ padding: "2rem", color: "#fff", opacity: 0.6 }}>
         <p>Navbar MFE — standalone dev view at port 3001</p>
       </main>

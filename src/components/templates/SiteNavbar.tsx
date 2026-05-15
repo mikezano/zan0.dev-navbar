@@ -3,13 +3,9 @@ import { Navbar } from "../organisms/Navbar";
 
 /** Default links for this app's MFE topology. */
 const SITE_LINKS: NavLinkDef[] = [
-  { to: "/", label: "Home", end: true },
-  { to: "/converters", label: "Converters" },
-  { to: "/me", label: "Michael Manzano" },
-  { to: "/qa-automation", label: "QA Automation" },
   { to: "/dupligrid", label: "Dupligrid" },
-  { to: "/zano-press", label: "Zano Presss" },
-  { to: "/translations", label: "Translations" },
+  { to: "/css-is-awesome", label: "CSS is awesome" },
+  { to: "/vocab", label: "Vocab" },
 ];
 
 export interface SiteNavbarProps {
